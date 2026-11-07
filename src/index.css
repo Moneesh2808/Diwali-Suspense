@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-diya-gold: #FFC857;
+  --color-diya-flame: #FF6B1A;
+  --color-diya-glow: rgba(255, 200, 87, 0.4);
+  --color-sky-dark: #02030A;
+  --color-sky-navy: #071126;
+  --color-sky-violet: #180D2C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #02030A;
+  color: #FFFFFF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  min-height: 100vh;
+}
+
+/* Custom glowing effects */
+.glow-gold {
+  filter: drop-shadow(0 0 12px rgba(255, 200, 87, 0.6))
+         drop-shadow(0 0 25px rgba(255, 140, 0, 0.35));
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 10px rgba(255, 200, 87, 0.7),
+               0 0 20px rgba(255, 150, 20, 0.5),
+               0 0 35px rgba(255, 100, 0, 0.3);
+}
+
+.glow-text-romantic {
+  text-shadow: 0 0 10px rgba(255, 77, 141, 0.8),
+               0 0 25px rgba(255, 42, 112, 0.5),
+               0 0 45px rgba(157, 78, 221, 0.4);
+}
+
+.glow-box-gold {
+  box-shadow: 0 0 20px rgba(255, 200, 87, 0.25),
+              inset 0 0 15px rgba(255, 200, 87, 0.15),
+              0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+.glow-box-romantic {
+  box-shadow: 0 0 25px rgba(255, 77, 141, 0.3),
+              inset 0 0 15px rgba(255, 77, 141, 0.15),
+              0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Glassmorphism romantic panel */
+.romantic-card {
+  background: radial-gradient(130% 130% at 50% 0%, rgba(24, 13, 44, 0.75) 0%, rgba(7, 17, 38, 0.85) 60%, rgba(2, 3, 10, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 200, 87, 0.22);
+}
+
+.romantic-card-kiss {
+  background: radial-gradient(130% 130% at 50% 10%, rgba(45, 15, 45, 0.85) 0%, rgba(18, 10, 30, 0.9) 60%, rgba(2, 3, 10, 0.96) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 77, 141, 0.3);
+}
+
+/* Hide scrollbar while allowing scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Shimmer gradient animation */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #FFC857 0%,
+    #FFF2B2 25%,
+    #FF7B90 50%,
+    #FFF2B2 75%,
+    #FFC857 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
